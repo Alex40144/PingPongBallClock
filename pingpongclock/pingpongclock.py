@@ -1,7 +1,6 @@
 from datetime import datetime
 import random
 import time
-import numpy as np
 from neopixel import *
 
 # LED strip configuration:
@@ -73,6 +72,10 @@ def FirstDigit(first_digit):
 		first_digit_pixels = [D[2][5],D[2][6],D[2][7],D[3][5],D[3][7],D[4][5],D[4][7],D[5][5],D[5][6],D[5][7],D[6][5],D[6][7],D[7][5],D[7][7],D[8][5],D[8][6],D[8][7]]
 	if first_digit == 9:
 		first_digit_pixels = [D[2][5],D[2][6],D[2][7],D[3][5],D[3][7],D[4][5],D[4][7],D[5][5],D[5][6],D[5][7],D[6][7],D[7][7],D[8][7]]
+	
+	for i in range(first_digit_pixels):
+		pixels[D[i]] = (256, 256, 256)
+	pixels.show()
 
 	print(first_digit_pixels)
 
