@@ -41,7 +41,7 @@ D       =  [[0,  0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14, 15, 
 		    [0,270,271,272,273,274,275,276,277,278,279,280,281,282,283,284,285,286,287,288,289,290,291,292,293,294,295,296]]
 
 
-dots = [D[4][14], D[8][14]]
+dots = [D[4][14], D[6][14]]
 
 def zero(origin_x, origin_y):
 	return(D[origin_x][origin_y],D[origin_x][origin_y+1],D[origin_x][origin_y+2],D[origin_x+1][origin_y],D[origin_x+1][origin_y+2],D[origin_x+2][origin_y],D[origin_x+2][origin_y+2],D[origin_x+2][origin_y],D[origin_x+2][origin_y+2],D[origin_x+3][origin_y],D[origin_x+3][origin_y+2],D[origin_x+4][origin_y],D[origin_x+4][origin_y+1],D[origin_x+4][origin_y+2])
@@ -126,9 +126,35 @@ def SecondDigit(second_digit):  #resize digit to only 5 pixels instead of 7
 		second_digit_pixels = nine(3, 9)
 
 
-	for i in range(len(second_digit_pixels)-1):
-		strip.setPixelColor(second_digit_pixels[i], Color(255, 255, 255))
+	for i in range(len(third_digit_pixels)-1):
+		strip.setPixelColor(third_digit_pixels[i], Color(255, 255, 255))
 
+def ThirdDigit(third_digit):  #resize digit to only 5 pixels instead of 7
+
+	if third_digit == 0:
+		third_digit_pixels = zero(3, 17)
+	elif third_digit == 1:
+		third_digit_pixels = one(3, 17)
+	elif third_digit == 2:
+		third_digit_pixels = two(3, 17)
+	elif third_digit == 3:
+		third_digit_pixels = three(3, 17)
+	elif third_digit == 4:
+		third_digit_pixels = four(3, 17)
+	elif third_digit == 5:
+		third_digit_pixels = five(3, 17)
+	elif third_digit == 6:
+		third_digit_pixels = six(3, 17)
+	elif third_digit == 7:
+		third_digit_pixels = seven(3, 17)
+	elif third_digit == 8:
+		third_digit_pixels = eight(3, 17)
+	elif third_digit == 17:
+		third_digit_pixels = nine(3, 17)
+
+
+	for i in range(len(third_digit_pixels)-1):
+		strip.setPixelColor(third_digit_pixels[i], Color(255, 255, 255))
 
 
 while True:
