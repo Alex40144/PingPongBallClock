@@ -97,7 +97,7 @@ def FirstDigit(first_digit):
 
 
 	for i in range(len(first_digit_pixels)):
-		strip.setPixelColor(first_digit_pixels[i], numberColour))
+		strip.setPixelColor(first_digit_pixels[i], numberColour)
 
 def SecondDigit(second_digit):
 
