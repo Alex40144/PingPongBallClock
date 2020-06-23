@@ -32,6 +32,11 @@ D       =  [[0,  0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14, 15, 
 
 dots = [D[4][14], D[6][14]]
 
+def Wipe():
+    """Wipe color across display a pixel at a time."""
+    for i in range(strip.numPixels()):
+        strip.setPixelColor(i, Color(0,0,0))
+
 def zero(origin_x, origin_y):
 	return(D[origin_x][origin_y],D[origin_x][origin_y+1],D[origin_x][origin_y+2],D[origin_x+1][origin_y],D[origin_x+1][origin_y+2],D[origin_x+2][origin_y],D[origin_x+2][origin_y+2],D[origin_x+2][origin_y],D[origin_x+2][origin_y+2],D[origin_x+3][origin_y],D[origin_x+3][origin_y+2],D[origin_x+4][origin_y],D[origin_x+4][origin_y+1],D[origin_x+4][origin_y+2])
 
@@ -173,6 +178,8 @@ def FourthDigit(fourth_digit):
 		strip.setPixelColor(fourth_digit_pixels[i], Color(255, 255, 255))
 
 while True:
+	Wipe()
+
 	current_hour = datetime.now().time().strftime("%H")
 	current_min = datetime.now().time().strftime("%M")
 
@@ -182,7 +189,7 @@ while True:
 	fourth_digit = int(str(current_min)[1:])
 
 	print(first_digit, second_digit, third_digit, fourth_digit)
-	
+
 	FirstDigit(first_digit)
 	SecondDigit(second_digit)
 	ThirdDigit(third_digit)
