@@ -190,7 +190,7 @@ def Background():
 	a+=5
 	if a == 256:
 		a = 0
-	for b in range(0,27):
+	for b in range(1,28):
 		for c in range(0,11):
 			strip.setPixelColor(D[c][b], wheel((int(b * 256 / 27) + a) & 255))
 
