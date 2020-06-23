@@ -160,7 +160,7 @@ def ThirdDigit(third_digit):  #resize digit to only 5 pixels instead of 7
 while True:
 	FirstDigit(first_digit)
 	SecondDigit(second_digit)
-	#ThirdDigit(third_digit)
+	ThirdDigit(third_digit)
 	#FourthDigit(fourth_digit)
 
 	strip.setPixelColor(dots[0], Color(255,255,255))
