@@ -40,22 +40,22 @@ def Wipe():
         strip.setPixelColor(i, Color(0,0,0))
 
 def zero(origin_x, origin_y):
-	return(D[origin_x][origin_y],D[origin_x][origin_y+1],D[origin_x][origin_y+2],D[origin_x][origin_y+3],D[origin_x+1][origin_y],D[origin_x+1][origin_y+3],D[origin_x+2][origin_y],D[origin_x+2][origin_y+3],D[origin_x+2][origin_y],D[origin_x+2][origin_y+3],D[origin_x+3][origin_y],D[origin_x+3][origin_y+32],D[origin_x+4][origin_y],D[origin_x+4][origin_y+3],D[origin_x+5][origin_y],D[origin_x+5][origin_y+3],D[origin_x+6][origin_y],D[origin_x+6][origin_y+1],D[origin_x+6][origin_y+2],D[origin_x+6][origin_y+3])
+	return(D[origin_x][origin_y],D[origin_x][origin_y+1],D[origin_x][origin_y+2],D[origin_x][origin_y+3],D[origin_x+1][origin_y],D[origin_x+1][origin_y+3],D[origin_x+2][origin_y],D[origin_x+2][origin_y+3],D[origin_x+2][origin_y],D[origin_x+2][origin_y+3],D[origin_x+3][origin_y],D[origin_x+3][origin_y+3],D[origin_x+4][origin_y],D[origin_x+4][origin_y+3],D[origin_x+5][origin_y],D[origin_x+5][origin_y+3],D[origin_x+6][origin_y],D[origin_x+6][origin_y+1],D[origin_x+6][origin_y+2],D[origin_x+6][origin_y+3])
 
 def one(origin_x, origin_y):
 	return(D[origin_x][origin_y+3],D[origin_x+1][origin_y+3],D[origin_x+2][origin_y+3],D[origin_x+3][origin_y+3],D[origin_x+4][origin_y+3],D[origin_x+5][origin_y+3],D[origin_x+6][origin_y+3])
 
 def two(origin_x, origin_y):
-	return(D[origin_x][origin_y],D[origin_x][origin_y+1],D[origin_x][origin_y+2],D[origin_x][origin_y+3],D[origin_x+1][origin_y+3],D[origin_x+2][origin_y+3],D[origin_x+3][origin_y],D[origin_x+3][origin_y+1],D[origin_x+3][origin_y+2],D[origin_x+3][origin_y+3],D[origin_x+4][origin_y+3],D[origin_x+5][origin_y+3],D[origin_x+6][origin_y],D[origin_x+6][origin_y+1],D[origin_x+64][origin_y+2],D[origin_x+6][origin_y+3])
+	return(D[origin_x][origin_y],D[origin_x][origin_y+1],D[origin_x][origin_y+2],D[origin_x][origin_y+3],D[origin_x+1][origin_y+3],D[origin_x+2][origin_y+3],D[origin_x+3][origin_y],D[origin_x+3][origin_y+1],D[origin_x+3][origin_y+2],D[origin_x+3][origin_y+3],D[origin_x+4][origin_y+3],D[origin_x+5][origin_y+3],D[origin_x+6][origin_y],D[origin_x+6][origin_y+1],D[origin_x+6][origin_y+2],D[origin_x+6][origin_y+3])
 
 def three(origin_x, origin_y):
-	return(D[origin_x][origin_y],D[origin_x][origin_y+1],D[origin_x][origin_y+2],D[origin_x][origin_y+3],D[origin_x+1][origin_y+3],D[origin_x+2][origin_y+3],D[origin_x+3][origin_y],D[origin_x+3][origin_y+1],D[origin_x+3][origin_y+2],D[origin_x+3][origin_y+3],D[origin_x+4][origin_y],D[origin_x+5][origin_y],D[origin_x+6][origin_y],D[origin_x+6][origin_y+1],D[origin_x+64][origin_y+2],D[origin_x+6][origin_y+3])
+	return(D[origin_x][origin_y],D[origin_x][origin_y+1],D[origin_x][origin_y+2],D[origin_x][origin_y+3],D[origin_x+1][origin_y+3],D[origin_x+2][origin_y+3],D[origin_x+3][origin_y],D[origin_x+3][origin_y+1],D[origin_x+3][origin_y+2],D[origin_x+3][origin_y+3],D[origin_x+4][origin_y],D[origin_x+5][origin_y],D[origin_x+6][origin_y],D[origin_x+6][origin_y+1],D[origin_x+6][origin_y+2],D[origin_x+6][origin_y+3])
 
 def four(origin_x, origin_y):
-	return(D[origin_x][origin_y],D[origin_x][origin_y+3],D[origin_x+1][origin_y],D[origin_x+1][origin_y+3],D[origin_x+2][origin_y],D[origin_x+2][origin_y+3],D[origin_x+3][origin_y],D[origin_x+3][origin_y+1],D[origin_x+3][origin_y+2],D[origin_x+3][origin_y+3],D[origin_x+4][origin_y+3],D[origin_x+5][origin_y+3],D[origin_x+6][origin_y],D[origin_x+6][origin_y+1],D[origin_x+64][origin_y+2],D[origin_x+6][origin_y+3])
+	return(D[origin_x][origin_y],D[origin_x][origin_y+3],D[origin_x+1][origin_y],D[origin_x+1][origin_y+3],D[origin_x+2][origin_y],D[origin_x+2][origin_y+3],D[origin_x+3][origin_y],D[origin_x+3][origin_y+1],D[origin_x+3][origin_y+2],D[origin_x+3][origin_y+3],D[origin_x+4][origin_y+3],D[origin_x+5][origin_y+3],D[origin_x+6][origin_y],D[origin_x+6][origin_y+1],D[origin_x+6][origin_y+2],D[origin_x+6][origin_y+3])
 
 def five(origin_x, origin_y):
-	return(D[origin_x][origin_y],D[origin_x][origin_y+1],D[origin_x][origin_y+2],D[origin_x][origin_y+3],D[origin_x+1][origin_y],D[origin_x+2][origin_y],D[origin_x+3][origin_y],D[origin_x+3][origin_y+1],D[origin_x+3][origin_y+2],D[origin_x+3][origin_y+3],D[origin_x+4][origin_y+3],D[origin_x+5][origin_y+3],D[origin_x+6][origin_y],D[origin_x+6][origin_y+1],D[origin_x+64][origin_y+2],D[origin_x+6][origin_y+3])
+	return(D[origin_x][origin_y],D[origin_x][origin_y+1],D[origin_x][origin_y+2],D[origin_x][origin_y+3],D[origin_x+1][origin_y],D[origin_x+2][origin_y],D[origin_x+3][origin_y],D[origin_x+3][origin_y+1],D[origin_x+3][origin_y+2],D[origin_x+3][origin_y+3],D[origin_x+4][origin_y+3],D[origin_x+5][origin_y+3],D[origin_x+6][origin_y],D[origin_x+6][origin_y+1],D[origin_x+6][origin_y+2],D[origin_x+6][origin_y+3])
 
 def six(origin_x, origin_y):
 	return(D[origin_x][origin_y],D[origin_x][origin_y+1],D[origin_x][origin_y+2],D[origin_x][origin_y+3],D[origin_x+1][origin_y],D[origin_x+2][origin_y],D[origin_x+3][origin_y],D[origin_x+3][origin_y+1],D[origin_x+3][origin_y+2],D[origin_x+3][origin_y+3],D[origin_x+4][origin_y],D[origin_x+4][origin_y+3],D[origin_x+5][origin_y],D[origin_x+5][origin_y+3],D[origin_x+6][origin_y],D[origin_x+6][origin_y+1],D[origin_x+6][origin_y+2],D[origin_x+6][origin_y+3])
@@ -64,10 +64,10 @@ def seven(origin_x, origin_y):
 	return(D[origin_x][origin_y],D[origin_x][origin_y+1],D[origin_x][origin_y+2],D[origin_x][origin_y+3],D[origin_x+1][origin_y+3],D[origin_x+2][origin_y+3],D[origin_x+3][origin_y+3],D[origin_x+4][origin_y+3],D[origin_x+5][origin_y+3],D[origin_x+6][origin_y+3])
 
 def eight(origin_x, origin_y):
-	return(D[origin_x][origin_y],D[origin_x][origin_y+1],D[origin_x][origin_y+2],D[origin_x][origin_y+3],D[origin_x+1][origin_y],D[origin_x+1][origin_y+3],D[origin_x+2][origin_y],D[origin_x+2][origin_y+3],D[origin_x+3][origin_y],D[origin_x+3][origin_y+1],D[origin_x+3][origin_y+2],D[origin_x+3][origin_y+3],D[origin_x+4][origin_y],D[origin_x+4][origin_y+3],D[origin_x+5][origin_y],D[origin_x+5][origin_y+3],D[origin_x+6][origin_y],D[origin_x+6][origin_y+1],D[origin_x+64][origin_y+2],D[origin_x+6][origin_y+3])
+	return(D[origin_x][origin_y],D[origin_x][origin_y+1],D[origin_x][origin_y+2],D[origin_x][origin_y+3],D[origin_x+1][origin_y],D[origin_x+1][origin_y+3],D[origin_x+2][origin_y],D[origin_x+2][origin_y+3],D[origin_x+3][origin_y],D[origin_x+3][origin_y+1],D[origin_x+3][origin_y+2],D[origin_x+3][origin_y+3],D[origin_x+4][origin_y],D[origin_x+4][origin_y+3],D[origin_x+5][origin_y],D[origin_x+5][origin_y+3],D[origin_x+6][origin_y],D[origin_x+6][origin_y+1],D[origin_x+6][origin_y+2],D[origin_x+6][origin_y+3])
 
 def nine(origin_x, origin_y):
-	return(D[origin_x][origin_y],D[origin_x][origin_y+1],D[origin_x][origin_y+2],D[origin_x][origin_y+3],D[origin_x+1][origin_y],D[origin_x+1][origin_y+3],D[origin_x+2][origin_y],D[origin_x+2][origin_y+3],D[origin_x+3][origin_y],D[origin_x+3][origin_y+1],D[origin_x+3][origin_y+2],D[origin_x+3][origin_y+3],D[origin_x+4][origin_y+3],D[origin_x+5][origin_y+3],D[origin_x+6][origin_y],D[origin_x+6][origin_y+1],D[origin_x+64][origin_y+2],D[origin_x+6][origin_y+3])
+	return(D[origin_x][origin_y],D[origin_x][origin_y+1],D[origin_x][origin_y+2],D[origin_x][origin_y+3],D[origin_x+1][origin_y],D[origin_x+1][origin_y+3],D[origin_x+2][origin_y],D[origin_x+2][origin_y+3],D[origin_x+3][origin_y],D[origin_x+3][origin_y+1],D[origin_x+3][origin_y+2],D[origin_x+3][origin_y+3],D[origin_x+4][origin_y+3],D[origin_x+5][origin_y+3],D[origin_x+6][origin_y],D[origin_x+6][origin_y+1],D[origin_x+6][origin_y+2],D[origin_x+6][origin_y+3])
 
 
 
