@@ -75,7 +75,7 @@ def nine(origin_x, origin_y):
 
 
 
-def FirstDigit(first_digit):  #resize digit to only 5 pixels instead of 7
+def FirstDigit(first_digit):
 
 	if first_digit == 0:
 		first_digit_pixels = zero(3,5)
@@ -102,7 +102,7 @@ def FirstDigit(first_digit):  #resize digit to only 5 pixels instead of 7
 	for i in range(len(first_digit_pixels)-1):
 		strip.setPixelColor(first_digit_pixels[i], Color(255, 255, 255))
 
-def SecondDigit(second_digit):  #resize digit to only 5 pixels instead of 7
+def SecondDigit(second_digit):
 
 	if second_digit == 0:
 		second_digit_pixels = zero(3, 9)
@@ -129,7 +129,7 @@ def SecondDigit(second_digit):  #resize digit to only 5 pixels instead of 7
 	for i in range(len(second_digit_pixels)-1):
 		strip.setPixelColor(second_digit_pixels[i], Color(255, 255, 255))
 
-def ThirdDigit(third_digit):  #resize digit to only 5 pixels instead of 7
+def ThirdDigit(third_digit):
 
 	if third_digit == 0:
 		third_digit_pixels = zero(3, 17)
@@ -156,12 +156,38 @@ def ThirdDigit(third_digit):  #resize digit to only 5 pixels instead of 7
 	for i in range(len(third_digit_pixels)-1):
 		strip.setPixelColor(third_digit_pixels[i], Color(255, 255, 255))
 
+def FourthDigit(fourth_digit):
+
+	if fourth_digit == 0:
+		fourth_digit_pixels = zero(3, 21)
+	elif fourth_digit == 1:
+		fourth_digit_pixels = one(3, 21)
+	elif fourth_digit == 2:
+		fourth_digit_pixels = two(3, 21)
+	elif fourth_digit == 3:
+		fourth_digit_pixels = three(3, 21)
+	elif fourth_digit == 4:
+		fourth_digit_pixels = four(3, 21)
+	elif fourth_digit == 5:
+		fourth_digit_pixels = five(3, 21)
+	elif fourth_digit == 6:
+		fourth_digit_pixels = six(3, 21)
+	elif fourth_digit == 7:
+		fourth_digit_pixels = seven(3, 21)
+	elif fourth_digit == 8:
+		fourth_digit_pixels = eight(3, 21)
+	elif fourth_digit == 9:
+		fourth_digit_pixels = nine(3, 21)
+
+
+	for i in range(len(fourth_digit_pixels)-1):
+		strip.setPixelColor(fourth_digit_pixels[i], Color(255, 255, 255))
 
 while True:
 	FirstDigit(first_digit)
 	SecondDigit(second_digit)
 	ThirdDigit(third_digit)
-	#FourthDigit(fourth_digit)
+	FourthDigit(fourth_digit)
 
 	strip.setPixelColor(dots[0], Color(255,255,255))
 	strip.setPixelColor(dots[1], Color(255,255,255))
