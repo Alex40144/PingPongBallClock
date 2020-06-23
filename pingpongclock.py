@@ -194,11 +194,11 @@ def wheel(pos):
 a = 0
 def Background():
 	global a
-	a+=1
+	a+=10
 	if a == 256:
 		a = 0
-	for b in range(0,26):
-		strip.setPixelColor(b, wheel((int(b * 256 / 26) + a) & 255))
+	for b in range(0,27):
+		strip.setPixelColor(b, wheel((int(b * 256 / 27) + a) & 255))
 
 while True:
 	Wipe()
