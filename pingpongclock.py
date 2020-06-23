@@ -40,34 +40,34 @@ def Wipe():
         strip.setPixelColor(i, Color(0,0,0))
 
 def zero(origin_x, origin_y):
-	return(D[origin_x][origin_y],D[origin_x][origin_y+1],D[origin_x][origin_y+2],D[origin_x+1][origin_y],D[origin_x+1][origin_y+2],D[origin_x+2][origin_y],D[origin_x+2][origin_y+2],D[origin_x+2][origin_y],D[origin_x+2][origin_y+2],D[origin_x+3][origin_y],D[origin_x+3][origin_y+2],D[origin_x+4][origin_y],D[origin_x+4][origin_y+1],D[origin_x+4][origin_y+2])
+	return(D[origin_x][origin_y],D[origin_x][origin_y+1],D[origin_x][origin_y+2],D[origin_x][origin_y+3],D[origin_x+1][origin_y],D[origin_x+1][origin_y+3],D[origin_x+2][origin_y],D[origin_x+2][origin_y+3],D[origin_x+2][origin_y],D[origin_x+2][origin_y+3],D[origin_x+3][origin_y],D[origin_x+3][origin_y+32],D[origin_x+4][origin_y],D[origin_x+4][origin_y+3],D[origin_x+5][origin_y],D[origin_x+5][origin_y+3],D[origin_x+6][origin_y],D[origin_x+6][origin_y+1],D[origin_x+6][origin_y+2],D[origin_x+6][origin_y+3],)
 
 def one(origin_x, origin_y):
-	return(D[origin_x][origin_y+2],D[origin_x+1][origin_y+2],D[origin_x+2][origin_y+2],D[origin_x+3][origin_y+2],D[origin_x+4][origin_y+2])
+	return(D[origin_x][origin_y+3],D[origin_x+1][origin_y+3],D[origin_x+2][origin_y+3],D[origin_x+3][origin_y+3],D[origin_x+4][origin_y+3]D[origin_x+5][origin_y+3],D[origin_x+6][origin_y+3],)
 
 def two(origin_x, origin_y):
-	return(D[origin_x][origin_y],D[origin_x][origin_y+1],D[origin_x][origin_y+2],D[origin_x+1][origin_y+2],D[origin_x+2][origin_y],D[origin_x+2][origin_y+1],D[origin_x+2][origin_y+2],D[origin_x+3][origin_y],D[origin_x+4][origin_y],D[origin_x+4][origin_y+1],D[origin_x+4][origin_y+2])
+	return(D[origin_x][origin_y],D[origin_x][origin_y+1],D[origin_x][origin_y+2],D[origin_x][origin_y+3],D[origin_x+1][origin_y+3],D[origin_x+2][origin_y+3],D[origin_x+3][origin_y],D[origin_x+3][origin_y+1],D[origin_x+3][origin_y+2],D[origin_x+3][origin_y+3],D[origin_x+4][origin_y+3],D[origin_x+5][origin_y+3],D[origin_x+6][origin_y],D[origin_x+6][origin_y+1],D[origin_x+64][origin_y+2],D[origin_x+6][origin_y+3])
 
 def three(origin_x, origin_y):
-	return(D[origin_x][origin_y],D[origin_x][origin_y+1],D[origin_x][origin_y+2],D[origin_x+1][origin_y+2],D[origin_x+2][origin_y],D[origin_x+2][origin_y+1],D[origin_x+2][origin_y+2],D[origin_x+3][origin_y+2],D[origin_x+4][origin_y],D[origin_x+4][origin_y+1],D[origin_x+4][origin_y+2])
+	return(D[origin_x][origin_y],D[origin_x][origin_y+1],D[origin_x][origin_y+2],D[origin_x][origin_y+3],D[origin_x+1][origin_y+3],D[origin_x+2][origin_y+3],D[origin_x+3][origin_y],D[origin_x+3][origin_y+1],D[origin_x+3][origin_y+2],D[origin_x+3][origin_y+3],D[origin_x+4][origin_y],D[origin_x+5][origin_y],D[origin_x+6][origin_y],D[origin_x+6][origin_y+1],D[origin_x+64][origin_y+2],D[origin_x+6][origin_y+3])
 
 def four(origin_x, origin_y):
-	return(D[origin_x][origin_y],D[origin_x][origin_y+2],D[origin_x+1][origin_y],D[origin_x+1][origin_y+2],D[origin_x+2][origin_y],D[origin_x+2][origin_y+1],D[origin_x+2][origin_y+2],D[origin_x+3][origin_y+2],D[origin_x+4][origin_y+2])
+	return(D[origin_x][origin_y],D[origin_x][origin_y+3],D[origin_x+1][origin_y],D[origin_x+1][origin_y+3],D[origin_x+2][origin_y],D[origin_x+2][origin_y+3],D[origin_x+3][origin_y],D[origin_x+3][origin_y+1],D[origin_x+3][origin_y+2],D[origin_x+3][origin_y+3],D[origin_x+4][origin_y+3],D[origin_x+5][origin_y+3],D[origin_x+6][origin_y],D[origin_x+6][origin_y+1],D[origin_x+64][origin_y+2],D[origin_x+6][origin_y+3])
 
 def five(origin_x, origin_y):
-	return(D[origin_x][origin_y],D[origin_x][origin_y+1],D[origin_x][origin_y+2],D[origin_x+1][origin_y],D[origin_x+2][origin_y],D[origin_x+2][origin_y+1],D[origin_x+2][origin_y+2],D[origin_x+3][origin_y+2],D[origin_x+4][origin_y],D[origin_x+4][origin_y+1],D[origin_x+4][origin_y+2])
+	return(D[origin_x][origin_y],D[origin_x][origin_y+1],D[origin_x][origin_y+2],D[origin_x][origin_y+3],D[origin_x+1][origin_y],D[origin_x+2][origin_y],D[origin_x+3][origin_y],D[origin_x+3][origin_y+1],D[origin_x+3][origin_y+2],D[origin_x+3][origin_y+3],D[origin_x+4][origin_y+3],D[origin_x+5][origin_y+3],D[origin_x+6][origin_y],D[origin_x+6][origin_y+1],D[origin_x+64][origin_y+2],D[origin_x+6][origin_y+3])
 
 def six(origin_x, origin_y):
-	return(D[origin_x][origin_y],D[origin_x][origin_y+1],D[origin_x][origin_y+2],D[origin_x+1][origin_y],D[origin_x+2][origin_y],D[origin_x+2][origin_y+1],D[origin_x+2][origin_y+2],D[origin_x+3][origin_y],D[origin_x+3][origin_y+2],D[origin_x+4][origin_y],D[origin_x+4][origin_y+1],D[origin_x+4][origin_y+2])
+	return(D[origin_x][origin_y],D[origin_x][origin_y+1],D[origin_x][origin_y+2],D[origin_x][origin_y+3],D[origin_x+1][origin_y],D[origin_x+2][origin_y],D[origin_x+3][origin_y],D[origin_x+3][origin_y+1],D[origin_x+3][origin_y+2],D[origin_x+3][origin_y+3],D[origin_x+4][origin_y],D[origin_x+4][origin_y+3],D[origin_x+5][origin_y],D[origin_x+5][origin_y+3],D[origin_x+6][origin_y],D[origin_x+6][origin_y+1],D[origin_x+64][origin_y+2],D[origin_x+6][origin_y+3])
 
 def seven(origin_x, origin_y):
-	return(D[origin_x][origin_y],D[origin_x][origin_y+1],D[origin_x][origin_y+2],D[origin_x+1][origin_y+2],D[origin_x+2][origin_y+2],D[origin_x+3][origin_y+2],D[origin_x+4][origin_y+2])
+	return(D[origin_x][origin_y],D[origin_x][origin_y+1],D[origin_x][origin_y+2],D[origin_x][origin_y+3],D[origin_x+1][origin_y+3],D[origin_x+2][origin_y+3],D[origin_x+3][origin_y+3],D[origin_x+4][origin_y+3]D[origin_x+5][origin_y+3],D[origin_x+6][origin_y+3],)
 
 def eight(origin_x, origin_y):
-	return(D[origin_x][origin_y],D[origin_x][origin_y+1],D[origin_x][origin_y+2],D[origin_x+1][origin_y],D[origin_x+1][origin_y+2],D[origin_x+2][origin_y],D[origin_x+2][origin_y+1],D[origin_x+2][origin_y+2],D[origin_x+3][origin_y],D[origin_x+3][origin_y+2],D[origin_x+4][origin_y],D[origin_x+4][origin_y+1],D[origin_x+4][origin_y+2])
+	return(D[origin_x][origin_y],D[origin_x][origin_y+1],D[origin_x][origin_y+2],D[origin_x][origin_y+3],D[origin_x+1][origin_y],D[origin_x+1][origin_y+3],D[origin_x+2][origin_y],D[origin_x+2][origin_y+3],D[origin_x+3][origin_y],D[origin_x+3][origin_y+1],D[origin_x+3][origin_y+2],D[origin_x+3][origin_y+3],D[origin_x+4][origin_y],D[origin_x+4][origin_y+3],D[origin_x+5][origin_y],D[origin_x+5][origin_y+3],D[origin_x+6][origin_y],D[origin_x+6][origin_y+1],D[origin_x+64][origin_y+2],D[origin_x+6][origin_y+3])
 
 def nine(origin_x, origin_y):
-	return(D[origin_x][origin_y],D[origin_x][origin_y+1],D[origin_x][origin_y+2],D[origin_x+1][origin_y],D[origin_x+1][origin_y+2],D[origin_x+2][origin_y],D[origin_x+2][origin_y+1],D[origin_x+2][origin_y+2],D[origin_x+3][origin_y+2],D[origin_x+4][origin_y],D[origin_x+4][origin_y+1],D[origin_x+4][origin_y+2])
+	return(D[origin_x][origin_y],D[origin_x][origin_y+1],D[origin_x][origin_y+2],D[origin_x][origin_y+3],D[origin_x+1][origin_y],D[origin_x+1][origin_y+3],D[origin_x+2][origin_y],D[origin_x+2][origin_y+3],D[origin_x+3][origin_y],D[origin_x+3][origin_y+1],D[origin_x+3][origin_y+2],D[origin_x+3][origin_y+3],D[origin_x+4][origin_y+3],D[origin_x+5][origin_y+3],D[origin_x+6][origin_y],D[origin_x+6][origin_y+1],D[origin_x+64][origin_y+2],D[origin_x+6][origin_y+3])
 
 
 
@@ -75,25 +75,25 @@ def nine(origin_x, origin_y):
 def FirstDigit(first_digit):
 
 	if first_digit == 0:
-		first_digit_pixels = zero(3,5)
+		first_digit_pixels = zero(2, 3)
 	elif first_digit == 1:
-		first_digit_pixels = one(3,5)
+		first_digit_pixels = one(2, 3)
 	elif first_digit == 2:
-		first_digit_pixels = two(3,5)
+		first_digit_pixels = two(2, 3)
 	elif first_digit == 3:
-		first_digit_pixels = three(3,5)
+		first_digit_pixels = three(2, 3)
 	elif first_digit == 4:
-		first_digit_pixels = four(3,5)
+		first_digit_pixels = four(2, 3)
 	elif first_digit == 5:
-		first_digit_pixels = five(3,5)
+		first_digit_pixels = five(2, 3)
 	elif first_digit == 6:
-		first_digit_pixels = six(3,5)
+		first_digit_pixels = six(2, 3)
 	elif first_digit == 7:
-		first_digit_pixels = seven(3,5)
+		first_digit_pixels = seven(2, 3)
 	elif first_digit == 8:
-		first_digit_pixels = eight(3,5)
+		first_digit_pixels = eight(2, 3)
 	elif first_digit == 9:
-		first_digit_pixels = nine(3,5)
+		first_digit_pixels = nine(2, 3)
 
 
 	for i in range(len(first_digit_pixels)):
@@ -102,25 +102,25 @@ def FirstDigit(first_digit):
 def SecondDigit(second_digit):
 
 	if second_digit == 0:
-		second_digit_pixels = zero(3, 9)
+		second_digit_pixels = zero(2, 8)
 	elif second_digit == 1:
-		second_digit_pixels = one(3, 9)
+		second_digit_pixels = one(2, 8)
 	elif second_digit == 2:
-		second_digit_pixels = two(3, 9)
+		second_digit_pixels = two(2, 8)
 	elif second_digit == 3:
-		second_digit_pixels = three(3, 9)
+		second_digit_pixels = three(2, 8)
 	elif second_digit == 4:
-		second_digit_pixels = four(3, 9)
+		second_digit_pixels = four(2, 8)
 	elif second_digit == 5:
-		second_digit_pixels = five(3, 9)
+		second_digit_pixels = five(2, 8)
 	elif second_digit == 6:
-		second_digit_pixels = six(3, 9)
+		second_digit_pixels = six(2, 8)
 	elif second_digit == 7:
-		second_digit_pixels = seven(3, 9)
+		second_digit_pixels = seven(2, 8)
 	elif second_digit == 8:
-		second_digit_pixels = eight(3, 9)
+		second_digit_pixels = eight(2, 8)
 	elif second_digit == 9:
-		second_digit_pixels = nine(3, 9)
+		second_digit_pixels = nine(2, 8)
 
 
 	for i in range(len(second_digit_pixels)):
@@ -129,24 +129,24 @@ def SecondDigit(second_digit):
 def ThirdDigit(third_digit):
 
 	if third_digit == 0:
-		third_digit_pixels = zero(3, 17)
+		third_digit_pixels = zero(2, 17)
 	elif third_digit == 1:
-		third_digit_pixels = one(3, 17)
+		third_digit_pixels = one(2, 17)
 	elif third_digit == 2:
-		third_digit_pixels = two(3, 17)
+		third_digit_pixels = two(2, 17)
 	elif third_digit == 3:
-		third_digit_pixels = three(3, 17)
+		third_digit_pixels = three(2, 17)
 	elif third_digit == 4:
-		third_digit_pixels = four(3, 17)
+		third_digit_pixels = four(2, 17)
 	elif third_digit == 5:
-		third_digit_pixels = five(3, 17)
+		third_digit_pixels = five(2, 17)
 	elif third_digit == 6:
-		third_digit_pixels = six(3, 17)
+		third_digit_pixels = six(2, 17)
 	elif third_digit == 7:
-		third_digit_pixels = seven(3, 17)
+		third_digit_pixels = seven(2, 17)
 	elif third_digit == 8:
-		third_digit_pixels = eight(3, 17)
-	elif third_digit == 17:
+		third_digit_pixels = eight(2, 17)
+	elif third_digit == 9:
 		third_digit_pixels = nine(3, 17)
 
 
@@ -156,25 +156,25 @@ def ThirdDigit(third_digit):
 def FourthDigit(fourth_digit):
 
 	if fourth_digit == 0:
-		fourth_digit_pixels = zero(3, 21)
+		fourth_digit_pixels = zero(2, 22)
 	elif fourth_digit == 1:
-		fourth_digit_pixels = one(3, 21)
+		fourth_digit_pixels = one(2, 22)
 	elif fourth_digit == 2:
-		fourth_digit_pixels = two(3, 21)
+		fourth_digit_pixels = two(2, 22)
 	elif fourth_digit == 3:
-		fourth_digit_pixels = three(3, 21)
+		fourth_digit_pixels = three(2, 22)
 	elif fourth_digit == 4:
-		fourth_digit_pixels = four(3, 21)
+		fourth_digit_pixels = four(2, 22)
 	elif fourth_digit == 5:
-		fourth_digit_pixels = five(3, 21)
+		fourth_digit_pixels = five(2, 22)
 	elif fourth_digit == 6:
-		fourth_digit_pixels = six(3, 21)
+		fourth_digit_pixels = six(2, 22)
 	elif fourth_digit == 7:
-		fourth_digit_pixels = seven(3, 21)
+		fourth_digit_pixels = seven(2, 22)
 	elif fourth_digit == 8:
-		fourth_digit_pixels = eight(3, 21)
+		fourth_digit_pixels = eight(2, 22)
 	elif fourth_digit == 9:
-		fourth_digit_pixels = nine(3, 21)
+		fourth_digit_pixels = nine(2, 22)
 
 
 	for i in range(len(fourth_digit_pixels)):
