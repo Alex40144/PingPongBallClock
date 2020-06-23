@@ -76,6 +76,8 @@ def FirstDigit(first_digit):
 	if first_digit == 9:
 		first_digit_pixels = [D[2][5],D[2][6],D[2][7],D[3][5],D[3][7],D[4][5],D[4][7],D[5][5],D[5][6],D[5][7],D[6][7],D[7][7],D[8][7]]
 	
+	print(first_digit_pixels)
+
 	for i in range(len(first_digit_pixels)):
 		strip.setPixelColor([first_digit_pixels[i]], (256, 256, 256))
 	strip.show()
