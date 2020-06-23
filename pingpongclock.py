@@ -28,7 +28,7 @@ fourth_digit = int(str(current_min)[1:])
 
 print(first_digit, second_digit, third_digit, fourth_digit)
 
-D       =          [[0,  0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26],
+D       =  [[0,  0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26],
 		    [0, 53, 52, 51, 50, 49, 48, 47, 46, 45, 44, 43, 42, 41, 40, 39, 38, 37, 36, 35, 34, 33, 32, 31, 30, 29, 28, 27],
 		    [0, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80],
 		    [0,107,106,105,104,103,102,101,100, 99, 98, 97, 96, 95, 94, 93, 92, 91, 90, 89, 88, 87, 86, 85, 84, 83, 82, 81],
@@ -43,20 +43,14 @@ D       =          [[0,  0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 
 
 dots = [D[4][14], D[8][14]]
 
+def zero(origin_x, origin_y):
+	return(D[origin_x][origin_y],D[origin_x][origin_y+1],D[origin_x][origin_y+2],D[origin_x+1][origin_y],D[origin_x+1][origin_y+2],D[origin_x+2][origin_y],D[origin_x+2][origin_y+2],D[origin_x+2][origin_y],D[origin_x+2][origin_y+2],D[origin_x+3][origin_y],D[origin_x+3][origin_y+2],D[origin_x+4][origin_y],D[origin_x+4][origin_y+2],D[origin_x+5][origin_y],D[origin_x+5][origin_y+1],D[origin_x+5][origin_y+2],)
 
-def FirstDigit(first_digit):
-		#2,5 | 2,6 | 2,7 
-		#3,5 | 3,6 | 3,7
-		#4,5 | 4,6 | 4,7
-		#5,5 | 5,6 | 5,7
-		#6,5 | 6,6 | 6,7
-		#7,5 | 7,6 | 7,7
-		#8,5 | 8,6 | 8,7
 
-		#[D[2][5],D[2][6],D[2][7],D[3][5],D[3][6],D[3][7],D[4][5],D[4][6],D[4][7],D[5][5],D[5][6],D[5][7],D[6][5],D[6][6],D[6][7],D[7][5],D[7][6],D[7][7],D[8][5],D[8][6],D[8][7]]
+def FirstDigit(first_digit):  #resize digit to only 5 pixels instead of 7
 
 	if first_digit == 0:
-		first_digit_pixels = [D[2][5],D[2][6],D[2][7],D[3][5],D[3][7],D[4][5],D[4][7],D[5][5],D[5][7],D[6][5],D[6][7],D[7][5],D[7][7],D[8][5],D[8][6],D[8][7]]
+		first_digit_pixels = zero(4,5)
 	elif first_digit == 1:
 		first_digit_pixels = [D[2][7],D[3][7],D[4][7],D[5][7],D[6][7],D[7][7],D[8][7]]
 	elif first_digit == 2:
