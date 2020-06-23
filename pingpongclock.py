@@ -136,4 +136,15 @@ while True:
 	SecondDigit(second_digit)
 	#ThirdDigit(third_digit)
 	#FourthDigit(fourth_digit)
+
+	strip.setPixelColor(dots[0], Color(255,255,255))
+	strip.setPixelColor(dots[1], Color(255,255,255))
+
 	strip.show()
+	time.sleep(1)
+
+	strip.setPixelColor(dots[0], Color(0,0,0))
+	strip.setPixelColor(dots[1], Color(0,0,0))
+
+	strip.show()
+	time.sleep(1)
