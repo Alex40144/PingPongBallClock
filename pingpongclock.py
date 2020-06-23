@@ -105,25 +105,25 @@ def FirstDigit(first_digit):  #resize digit to only 5 pixels instead of 7
 def SecondDigit(second_digit):  #resize digit to only 5 pixels instead of 7
 
 	if second_digit == 0:
-		second_digit_pixels = zero(7,5)
+		second_digit_pixels = zero(3, 9)
 	elif second_digit == 1:
-		second_digit_pixels = one(7,5)
+		second_digit_pixels = one(3, 9)
 	elif second_digit == 2:
-		second_digit_pixels = two(7,5)
+		second_digit_pixels = two(3, 9)
 	elif second_digit == 3:
-		second_digit_pixels = three(7,5)
+		second_digit_pixels = three(3, 9)
 	elif second_digit == 4:
-		second_digit_pixels = four(7,5)
+		second_digit_pixels = four(3, 9)
 	elif second_digit == 5:
-		second_digit_pixels = five(7,5)
+		second_digit_pixels = five(3, 9)
 	elif second_digit == 6:
-		second_digit_pixels = six(7,5)
+		second_digit_pixels = six(3, 9)
 	elif second_digit == 7:
-		second_digit_pixels = seven(7,5)
+		second_digit_pixels = seven(3, 9)
 	elif second_digit == 8:
-		second_digit_pixels = eight(7,5)
+		second_digit_pixels = eight(3, 9)
 	elif second_digit == 9:
-		second_digit_pixels = nine(7,5)
+		second_digit_pixels = nine(3, 9)
 
 
 	for i in range(len(second_digit_pixels)-1):
