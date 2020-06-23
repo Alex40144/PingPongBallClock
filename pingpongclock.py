@@ -197,8 +197,8 @@ def Background():
 	a+=1
 	if a == 256:
 		a = 0
-    for b in range(0,26):
-		strip.setPixelColor(b, wheel((int(i * 256 / 26) + a) & 255))
+	for b in range(0,26):
+		strip.setPixelColor(b, wheel((int(b * 256 / 26) + a) & 255))
 
 while True:
 	Wipe()
