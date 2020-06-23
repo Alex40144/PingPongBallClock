@@ -183,13 +183,13 @@ def FourthDigit(fourth_digit):
 def wheel(pos):
 	"""Generate rainbow colors across 0-255 positions."""
 	if pos < 85:
-        return Color(pos * 3, 255 - pos * 3, 0)
-    elif pos < 170:
-        pos -= 85
-        return Color(255 - pos * 3, 0, pos * 3)
-    else:
-        pos -= 170
-    	return Color(0, pos * 3, 255 - pos * 3)
+		return Color(pos * 3, 255 - pos * 3, 0)
+	elif pos < 170:
+		pos -= 85
+		return Color(255 - pos * 3, 0, pos * 3)
+	else:
+		pos -= 170
+		return Color(0, pos * 3, 255 - pos * 3)
 
 a = 0
 def Background():
@@ -197,8 +197,8 @@ def Background():
 	a+=1
 	if a == 256:
 		a = 0
-    for b in range(strip.numPixels()):
-        strip.setPixelColor(b, wheel((int(i * 256 / strip.numPixels()) + a) & 255))
+    for b in range(0,26):
+		strip.setPixelColor(b, wheel((int(i * 256 / 26) + a) & 255))
 
 while True:
 	Wipe()
