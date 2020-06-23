@@ -42,6 +42,7 @@ def zero(origin_x, origin_y):
 
 def one(origin_x, origin_y):
 	return(D[origin_x][origin_y+2],D[origin_x+1][origin_y+2],D[origin_x+2][origin_y+2],D[origin_x+3][origin_y+2],D[origin_x+4][origin_y+2])
+
 def two(origin_x, origin_y):
 	return(D[origin_x][origin_y],D[origin_x][origin_y+1],D[origin_x][origin_y+2],D[origin_x+1][origin_y+2],D[origin_x+2][origin_y],D[origin_x+2][origin_y+1],D[origin_x+2][origin_y+2],D[origin_x+3][origin_y],D[origin_x+4][origin_y],D[origin_x+4][origin_y+1],D[origin_x+4][origin_y+2])
 
@@ -93,7 +94,7 @@ def FirstDigit(first_digit):
 		first_digit_pixels = nine(3,5)
 
 
-	for i in range(len(first_digit_pixels)-1):
+	for i in range(len(first_digit_pixels)):
 		strip.setPixelColor(first_digit_pixels[i], Color(255, 255, 255))
 
 def SecondDigit(second_digit):
@@ -120,7 +121,7 @@ def SecondDigit(second_digit):
 		second_digit_pixels = nine(3, 9)
 
 
-	for i in range(len(second_digit_pixels)-1):
+	for i in range(len(second_digit_pixels)):
 		strip.setPixelColor(second_digit_pixels[i], Color(255, 255, 255))
 
 def ThirdDigit(third_digit):
@@ -147,7 +148,7 @@ def ThirdDigit(third_digit):
 		third_digit_pixels = nine(3, 17)
 
 
-	for i in range(len(third_digit_pixels)-1):
+	for i in range(len(third_digit_pixels)):
 		strip.setPixelColor(third_digit_pixels[i], Color(255, 255, 255))
 
 def FourthDigit(fourth_digit):
@@ -174,7 +175,7 @@ def FourthDigit(fourth_digit):
 		fourth_digit_pixels = nine(3, 21)
 
 
-	for i in range(len(fourth_digit_pixels)-1):
+	for i in range(len(fourth_digit_pixels)):
 		strip.setPixelColor(fourth_digit_pixels[i], Color(255, 255, 255))
 
 while True:
