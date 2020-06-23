@@ -17,17 +17,6 @@ strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, 
 
 strip.begin()
 
-current_hour = datetime.now().time().strftime("%H")
-current_min = datetime.now().time().strftime("%M")
-
-first_digit = int(str(current_hour)[:1])
-second_digit = int(str(current_hour)[1:])
-third_digit = int(str(current_min)[:1])
-fourth_digit = int(str(current_min)[1:])
-
-
-print(first_digit, second_digit, third_digit, fourth_digit)
-
 D       =  [[0,  0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26],
 		    [0, 53, 52, 51, 50, 49, 48, 47, 46, 45, 44, 43, 42, 41, 40, 39, 38, 37, 36, 35, 34, 33, 32, 31, 30, 29, 28, 27],
 		    [0, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80],
@@ -184,6 +173,16 @@ def FourthDigit(fourth_digit):
 		strip.setPixelColor(fourth_digit_pixels[i], Color(255, 255, 255))
 
 while True:
+	current_hour = datetime.now().time().strftime("%H")
+	current_min = datetime.now().time().strftime("%M")
+
+	first_digit = int(str(current_hour)[:1])
+	second_digit = int(str(current_hour)[1:])
+	third_digit = int(str(current_min)[:1])
+	fourth_digit = int(str(current_min)[1:])
+
+	print(first_digit, second_digit, third_digit, fourth_digit)
+	
 	FirstDigit(first_digit)
 	SecondDigit(second_digit)
 	ThirdDigit(third_digit)
