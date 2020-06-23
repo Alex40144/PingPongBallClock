@@ -32,6 +32,8 @@ D       =  [[0,  0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14, 15, 
 
 dots = [D[4][14], D[6][14]]
 
+numberColour = Color(255,0,0)
+
 def Wipe():
     """Wipe color across display a pixel at a time."""
     for i in range(strip.numPixels()):
@@ -95,7 +97,7 @@ def FirstDigit(first_digit):
 
 
 	for i in range(len(first_digit_pixels)):
-		strip.setPixelColor(first_digit_pixels[i], Color(255, 255, 255))
+		strip.setPixelColor(first_digit_pixels[i], numberColour))
 
 def SecondDigit(second_digit):
 
@@ -122,7 +124,7 @@ def SecondDigit(second_digit):
 
 
 	for i in range(len(second_digit_pixels)):
-		strip.setPixelColor(second_digit_pixels[i], Color(255, 255, 255))
+		strip.setPixelColor(second_digit_pixels[i], numberColour)
 
 def ThirdDigit(third_digit):
 
@@ -149,7 +151,7 @@ def ThirdDigit(third_digit):
 
 
 	for i in range(len(third_digit_pixels)):
-		strip.setPixelColor(third_digit_pixels[i], Color(255, 255, 255))
+		strip.setPixelColor(third_digit_pixels[i], numberColour)
 
 def FourthDigit(fourth_digit):
 
@@ -176,7 +178,7 @@ def FourthDigit(fourth_digit):
 
 
 	for i in range(len(fourth_digit_pixels)):
-		strip.setPixelColor(fourth_digit_pixels[i], Color(255, 255, 255))
+		strip.setPixelColor(fourth_digit_pixels[i], numberColour)
 
 while True:
 	Wipe()
@@ -196,8 +198,8 @@ while True:
 	ThirdDigit(third_digit)
 	FourthDigit(fourth_digit)
 
-	strip.setPixelColor(dots[0], Color(255,255,255))
-	strip.setPixelColor(dots[1], Color(255,255,255))
+	strip.setPixelColor(dots[0], numberColour)
+	strip.setPixelColor(dots[1], numberColour)
 
 	strip.show()
 	time.sleep(1)
