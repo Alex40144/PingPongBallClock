@@ -182,11 +182,10 @@ def FourthDigit(fourth_digit):
 
 def wheel(pos):
 	"""Generate rainbow colors across 0-255 positions."""
-	if pos < 120:
-		return Color(0, 255 - pos * 3, 0)
-	else:
-		pos -= 120
-		return Color(0, pos * 3, 255 - pos * 3)
+	pos = pos*2
+	if pos > 255:
+		pos = 0
+	return( Color(0,255-pos,pos))
 
 a = 0
 def Background():
