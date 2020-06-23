@@ -126,8 +126,8 @@ def SecondDigit(second_digit):  #resize digit to only 5 pixels instead of 7
 		second_digit_pixels = nine(3, 9)
 
 
-	for i in range(len(third_digit_pixels)-1):
-		strip.setPixelColor(third_digit_pixels[i], Color(255, 255, 255))
+	for i in range(len(second_digit_pixels)-1):
+		strip.setPixelColor(second_digit_pixels[i], Color(255, 255, 255))
 
 def ThirdDigit(third_digit):  #resize digit to only 5 pixels instead of 7
 
