@@ -50,7 +50,7 @@ def zero(origin_x, origin_y):
 def FirstDigit(first_digit):  #resize digit to only 5 pixels instead of 7
 
 	if first_digit == 0:
-		first_digit_pixels = zero(4,5)
+		first_digit_pixels = zero(3,5)
 	elif first_digit == 1:
 		first_digit_pixels = [D[2][7],D[3][7],D[4][7],D[5][7],D[6][7],D[7][7],D[8][7]]
 	elif first_digit == 2:
