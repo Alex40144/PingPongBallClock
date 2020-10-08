@@ -1,7 +1,13 @@
 from datetime import datetime
 import random
 import time
-from neopixel import *
+import chars
+from neopixeltest import *
+
+#############################
+clock = False
+#############################
+
 
 # LED strip configuration:
 LED_COUNT      = 297      # Number of LED pixels.
@@ -17,18 +23,8 @@ strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, 
 
 strip.begin()
 
-D       =  [[0,  0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26],
-		    [0, 53, 52, 51, 50, 49, 48, 47, 46, 45, 44, 43, 42, 41, 40, 39, 38, 37, 36, 35, 34, 33, 32, 31, 30, 29, 28, 27],
-		    [0, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80],
-		    [0,107,106,105,104,103,102,101,100, 99, 98, 97, 96, 95, 94, 93, 92, 91, 90, 89, 88, 87, 86, 85, 84, 83, 82, 81],
-		    [0,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134],
-		    [0,161,160,159,158,157,156,155,154,153,152,151,150,149,148,147,146,145,144,143,142,141,140,139,138,137,136,135],
-		    [0,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188],
-		    [0,215,214,213,212,211,210,209,208,207,206,205,204,203,202,201,200,199,198,197,196,195,194,193,192,191,190,189],
-		    [0,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242],
-		    [0,269,268,267,266,265,264,263,262,261,260,259,258,257,256,255,254,253,252,251,250,249,248,247,246,245,244,243],
-		    [0,270,271,272,273,274,275,276,277,278,279,280,281,282,283,284,285,286,287,288,289,290,291,292,293,294,295,296]]
 
+D = chars.display()
 
 dots = [D[4][14], D[6][14]]
 
@@ -39,61 +35,29 @@ def Wipe():
     for i in range(strip.numPixels()):
         strip.setPixelColor(i, Color(0,0,0))
 
-def zero(origin_x, origin_y):
-	return(D[origin_x][origin_y],D[origin_x][origin_y+1],D[origin_x][origin_y+2],D[origin_x][origin_y+3],D[origin_x+1][origin_y],D[origin_x+1][origin_y+3],D[origin_x+2][origin_y],D[origin_x+2][origin_y+3],D[origin_x+2][origin_y],D[origin_x+2][origin_y+3],D[origin_x+3][origin_y],D[origin_x+3][origin_y+3],D[origin_x+4][origin_y],D[origin_x+4][origin_y+3],D[origin_x+5][origin_y],D[origin_x+5][origin_y+3],D[origin_x+6][origin_y],D[origin_x+6][origin_y+1],D[origin_x+6][origin_y+2],D[origin_x+6][origin_y+3])
-
-def one(origin_x, origin_y):
-	return(D[origin_x][origin_y+3],D[origin_x+1][origin_y+3],D[origin_x+2][origin_y+3],D[origin_x+3][origin_y+3],D[origin_x+4][origin_y+3],D[origin_x+5][origin_y+3],D[origin_x+6][origin_y+3])
-
-def two(origin_x, origin_y):
-	return(D[origin_x][origin_y],D[origin_x][origin_y+1],D[origin_x][origin_y+2],D[origin_x][origin_y+3],D[origin_x+1][origin_y+3],D[origin_x+2][origin_y+3],D[origin_x+3][origin_y],D[origin_x+3][origin_y+1],D[origin_x+3][origin_y+2],D[origin_x+3][origin_y+3],D[origin_x+4][origin_y],D[origin_x+5][origin_y],D[origin_x+6][origin_y],D[origin_x+6][origin_y+1],D[origin_x+6][origin_y+2],D[origin_x+6][origin_y+3])
-
-def three(origin_x, origin_y):
-	return(D[origin_x][origin_y],D[origin_x][origin_y+1],D[origin_x][origin_y+2],D[origin_x][origin_y+3],D[origin_x+1][origin_y+3],D[origin_x+2][origin_y+3],D[origin_x+3][origin_y],D[origin_x+3][origin_y+1],D[origin_x+3][origin_y+2],D[origin_x+3][origin_y+3],D[origin_x+4][origin_y+3],D[origin_x+5][origin_y+3],D[origin_x+6][origin_y],D[origin_x+6][origin_y+1],D[origin_x+6][origin_y+2],D[origin_x+6][origin_y+3])
-
-def four(origin_x, origin_y):
-	return(D[origin_x][origin_y],D[origin_x][origin_y+3],D[origin_x+1][origin_y],D[origin_x+1][origin_y+3],D[origin_x+2][origin_y],D[origin_x+2][origin_y+3],D[origin_x+3][origin_y],D[origin_x+3][origin_y+1],D[origin_x+3][origin_y+2],D[origin_x+3][origin_y+3],D[origin_x+4][origin_y+3],D[origin_x+5][origin_y+3],D[origin_x+6][origin_y+3])
-
-def five(origin_x, origin_y):
-	return(D[origin_x][origin_y],D[origin_x][origin_y+1],D[origin_x][origin_y+2],D[origin_x][origin_y+3],D[origin_x+1][origin_y],D[origin_x+2][origin_y],D[origin_x+3][origin_y],D[origin_x+3][origin_y+1],D[origin_x+3][origin_y+2],D[origin_x+3][origin_y+3],D[origin_x+4][origin_y+3],D[origin_x+5][origin_y+3],D[origin_x+6][origin_y],D[origin_x+6][origin_y+1],D[origin_x+6][origin_y+2],D[origin_x+6][origin_y+3])
-
-def six(origin_x, origin_y):
-	return(D[origin_x][origin_y],D[origin_x][origin_y+1],D[origin_x][origin_y+2],D[origin_x][origin_y+3],D[origin_x+1][origin_y],D[origin_x+2][origin_y],D[origin_x+3][origin_y],D[origin_x+3][origin_y+1],D[origin_x+3][origin_y+2],D[origin_x+3][origin_y+3],D[origin_x+4][origin_y],D[origin_x+4][origin_y+3],D[origin_x+5][origin_y],D[origin_x+5][origin_y+3],D[origin_x+6][origin_y],D[origin_x+6][origin_y+1],D[origin_x+6][origin_y+2],D[origin_x+6][origin_y+3])
-
-def seven(origin_x, origin_y):
-	return(D[origin_x][origin_y],D[origin_x][origin_y+1],D[origin_x][origin_y+2],D[origin_x][origin_y+3],D[origin_x+1][origin_y+3],D[origin_x+2][origin_y+3],D[origin_x+3][origin_y+3],D[origin_x+4][origin_y+3],D[origin_x+5][origin_y+3],D[origin_x+6][origin_y+3])
-
-def eight(origin_x, origin_y):
-	return(D[origin_x][origin_y],D[origin_x][origin_y+1],D[origin_x][origin_y+2],D[origin_x][origin_y+3],D[origin_x+1][origin_y],D[origin_x+1][origin_y+3],D[origin_x+2][origin_y],D[origin_x+2][origin_y+3],D[origin_x+3][origin_y],D[origin_x+3][origin_y+1],D[origin_x+3][origin_y+2],D[origin_x+3][origin_y+3],D[origin_x+4][origin_y],D[origin_x+4][origin_y+3],D[origin_x+5][origin_y],D[origin_x+5][origin_y+3],D[origin_x+6][origin_y],D[origin_x+6][origin_y+1],D[origin_x+6][origin_y+2],D[origin_x+6][origin_y+3])
-
-def nine(origin_x, origin_y):
-	return(D[origin_x][origin_y],D[origin_x][origin_y+1],D[origin_x][origin_y+2],D[origin_x][origin_y+3],D[origin_x+1][origin_y],D[origin_x+1][origin_y+3],D[origin_x+2][origin_y],D[origin_x+2][origin_y+3],D[origin_x+3][origin_y],D[origin_x+3][origin_y+1],D[origin_x+3][origin_y+2],D[origin_x+3][origin_y+3],D[origin_x+4][origin_y+3],D[origin_x+5][origin_y+3],D[origin_x+6][origin_y],D[origin_x+6][origin_y+1],D[origin_x+6][origin_y+2],D[origin_x+6][origin_y+3])
-
-
-
 
 def FirstDigit(first_digit):
 
 	if first_digit == 0:
-		first_digit_pixels = zero(2, 3)
+		first_digit_pixels = chars.zero(2, 3)
 	elif first_digit == 1:
-		first_digit_pixels = one(2, 3)
+		first_digit_pixels = chars.one(2, 3)
 	elif first_digit == 2:
-		first_digit_pixels = two(2, 3)
+		first_digit_pixels = chars.two(2, 3)
 	elif first_digit == 3:
-		first_digit_pixels = three(2, 3)
+		first_digit_pixels = chars.three(2, 3)
 	elif first_digit == 4:
-		first_digit_pixels = four(2, 3)
+		first_digit_pixels = chars.four(2, 3)
 	elif first_digit == 5:
-		first_digit_pixels = five(2, 3)
+		first_digit_pixels = chars.five(2, 3)
 	elif first_digit == 6:
-		first_digit_pixels = six(2, 3)
+		first_digit_pixels = chars.six(2, 3)
 	elif first_digit == 7:
-		first_digit_pixels = seven(2, 3)
+		first_digit_pixels = chars.seven(2, 3)
 	elif first_digit == 8:
-		first_digit_pixels = eight(2, 3)
+		first_digit_pixels = chars.eight(2, 3)
 	elif first_digit == 9:
-		first_digit_pixels = nine(2, 3)
+		first_digit_pixels = chars.nine(2, 3)
 
 
 	for i in range(len(first_digit_pixels)):
@@ -102,25 +66,25 @@ def FirstDigit(first_digit):
 def SecondDigit(second_digit):
 
 	if second_digit == 0:
-		second_digit_pixels = zero(2, 8)
+		second_digit_pixels = chars.zero(2, 8)
 	elif second_digit == 1:
-		second_digit_pixels = one(2, 8)
+		second_digit_pixels = chars.one(2, 8)
 	elif second_digit == 2:
-		second_digit_pixels = two(2, 8)
+		second_digit_pixels = chars.two(2, 8)
 	elif second_digit == 3:
-		second_digit_pixels = three(2, 8)
+		second_digit_pixels = chars.three(2, 8)
 	elif second_digit == 4:
-		second_digit_pixels = four(2, 8)
+		second_digit_pixels = chars.four(2, 8)
 	elif second_digit == 5:
-		second_digit_pixels = five(2, 8)
+		second_digit_pixels = chars.five(2, 8)
 	elif second_digit == 6:
-		second_digit_pixels = six(2, 8)
+		second_digit_pixels = chars.six(2, 8)
 	elif second_digit == 7:
-		second_digit_pixels = seven(2, 8)
+		second_digit_pixels = chars.seven(2, 8)
 	elif second_digit == 8:
-		second_digit_pixels = eight(2, 8)
+		second_digit_pixels = chars.eight(2, 8)
 	elif second_digit == 9:
-		second_digit_pixels = nine(2, 8)
+		second_digit_pixels = chars.nine(2, 8)
 
 
 	for i in range(len(second_digit_pixels)):
@@ -129,25 +93,25 @@ def SecondDigit(second_digit):
 def ThirdDigit(third_digit):
 
 	if third_digit == 0:
-		third_digit_pixels = zero(2, 17)
+		third_digit_pixels = chars.zero(2, 17)
 	elif third_digit == 1:
-		third_digit_pixels = one(2, 17)
+		third_digit_pixels = chars.one(2, 17)
 	elif third_digit == 2:
-		third_digit_pixels = two(2, 17)
+		third_digit_pixels = chars.two(2, 17)
 	elif third_digit == 3:
-		third_digit_pixels = three(2, 17)
+		third_digit_pixels = chars.three(2, 17)
 	elif third_digit == 4:
-		third_digit_pixels = four(2, 17)
+		third_digit_pixels = chars.four(2, 17)
 	elif third_digit == 5:
-		third_digit_pixels = five(2, 17)
+		third_digit_pixels = chars.five(2, 17)
 	elif third_digit == 6:
-		third_digit_pixels = six(2, 17)
+		third_digit_pixels = chars.six(2, 17)
 	elif third_digit == 7:
-		third_digit_pixels = seven(2, 17)
+		third_digit_pixels = chars.seven(2, 17)
 	elif third_digit == 8:
-		third_digit_pixels = eight(2, 17)
+		third_digit_pixels = chars.eight(2, 17)
 	elif third_digit == 9:
-		third_digit_pixels = nine(3, 17)
+		third_digit_pixels = chars.nine(3, 17)
 
 
 	for i in range(len(third_digit_pixels)):
@@ -156,25 +120,25 @@ def ThirdDigit(third_digit):
 def FourthDigit(fourth_digit):
 
 	if fourth_digit == 0:
-		fourth_digit_pixels = zero(2, 22)
+		fourth_digit_pixels = chars.zero(2, 22)
 	elif fourth_digit == 1:
-		fourth_digit_pixels = one(2, 22)
+		fourth_digit_pixels = chars.one(2, 22)
 	elif fourth_digit == 2:
-		fourth_digit_pixels = two(2, 22)
+		fourth_digit_pixels = chars.two(2, 22)
 	elif fourth_digit == 3:
-		fourth_digit_pixels = three(2, 22)
+		fourth_digit_pixels = chars.three(2, 22)
 	elif fourth_digit == 4:
-		fourth_digit_pixels = four(2, 22)
+		fourth_digit_pixels = chars.four(2, 22)
 	elif fourth_digit == 5:
-		fourth_digit_pixels = five(2, 22)
+		fourth_digit_pixels = chars.five(2, 22)
 	elif fourth_digit == 6:
-		fourth_digit_pixels = six(2, 22)
+		fourth_digit_pixels = chars.six(2, 22)
 	elif fourth_digit == 7:
-		fourth_digit_pixels = seven(2, 22)
+		fourth_digit_pixels = chars.seven(2, 22)
 	elif fourth_digit == 8:
-		fourth_digit_pixels = eight(2, 22)
+		fourth_digit_pixels = chars.eight(2, 22)
 	elif fourth_digit == 9:
-		fourth_digit_pixels = nine(2, 22)
+		fourth_digit_pixels = chars.nine(2, 22)
 
 
 	for i in range(len(fourth_digit_pixels)):
@@ -201,30 +165,39 @@ def Background():
 while True:
 	Wipe()
 	Background()
+	if clock:
+		current_hour = datetime.now().time().strftime("%H")
+		current_min = datetime.now().time().strftime("%M")
 
-	current_hour = datetime.now().time().strftime("%H")
-	current_min = datetime.now().time().strftime("%M")
+		first_digit = int(str(current_hour)[:1])
+		second_digit = int(str(current_hour)[1:])
+		third_digit = int(str(current_min)[:1])
+		fourth_digit = int(str(current_min)[1:])
 
-	first_digit = int(str(current_hour)[:1])
-	second_digit = int(str(current_hour)[1:])
-	third_digit = int(str(current_min)[:1])
-	fourth_digit = int(str(current_min)[1:])
+		print(first_digit, second_digit, third_digit, fourth_digit)
 
-	print(first_digit, second_digit, third_digit, fourth_digit)
+		FirstDigit(first_digit)
+		SecondDigit(second_digit)
+		ThirdDigit(third_digit)
+		FourthDigit(fourth_digit)
 
-	FirstDigit(first_digit)
-	SecondDigit(second_digit)
-	ThirdDigit(third_digit)
-	FourthDigit(fourth_digit)
+		strip.setPixelColor(dots[0], Color(255,255,255))
+		strip.setPixelColor(dots[1], Color(255,255,255))
 
-	strip.setPixelColor(dots[0], Color(255,255,255))
-	strip.setPixelColor(dots[1], Color(255,255,255))
+		strip.show()
+		time.sleep(1)
 
-	strip.show()
-	time.sleep(1)
+		strip.setPixelColor(dots[0], Color(0,0,0))
+		strip.setPixelColor(dots[1], Color(0,0,0))
 
-	strip.setPixelColor(dots[0], Color(0,0,0))
-	strip.setPixelColor(dots[1], Color(0,0,0))
+		strip.show()
+		time.sleep(1)
+	else:
+		#assume we are scrolling text for now
+		letterpixels = chars.A(2, 8)
+		for i in range(len(letterpixels)):
+			strip.setPixelColor(letterpixels[i], numberColour)
 
-	strip.show()
-	time.sleep(1)
+		strip.show()
+		time.sleep(1)
+			

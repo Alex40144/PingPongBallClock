@@ -1,0 +1,9 @@
+{
+    "python.pythonPath": "C:\\Users\\giddy\\envs\\pygame\\Scripts\\python.exe",
+    "python.linting.enabled": false,
+    "python.linting.pylintEnabled": true,
+    "python.linting.pylintArgs": [
+        "--disable=all",
+        "--enable=F,E,unreachable,duplicate-key,unnecessary-semicolon,global-variable-not-assigned,unused-variable,binary-op-exception,bad-format-string,anomalous-backslash-in-string,bad-open-mode"
+    ]
+}
