@@ -27,6 +27,7 @@ class Adafruit_NeoPixel (object):
                 pygame.draw.rect(self.screen, rectColor, rect, 0)
         #pygame update screen
         pygame.display.flip()
+        print("updated")
 
     def numPixels(self):
         return self.LED_COUNT
