@@ -1,9 +1,12 @@
-import requests
 import json
 import time
+
+import requests
+
 import chars
-from neopixeltest import Color
+import OpenWebPortal.OpenWebPortal as OWP
 from neopixeltest import *
+from neopixeltest import Color
 
 # LED strip configuration:
 LED_COUNT      = 297      # Number of LED pixels.
@@ -20,16 +23,6 @@ strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, 
 strip.begin()
 
 while True:
-    data = requests.get("http://127.0.0.1:5000/settings.json")
-    data = json.loads(data.text)
-    print(data)
-    for item in data:
-        #remove # from hex value
-        colour = data[item].lstrip('#')
-        #convert the hex value to rgb values
-        colour = tuple(int(colour[i:i+2], 16) for i in (0, 2, 4))
-        #set the pixel colour
-        strip.setPixelColor(int(item)-1, Color(colour[0], colour[1], colour[2]))
     strip.show()
     time.sleep(1)
 
