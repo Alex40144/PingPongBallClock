@@ -1,4 +1,7 @@
-import pygame, sys
+import sys
+
+import pygame
+
 from chars import D
 
 
