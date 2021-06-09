@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "C:\\Users\\giddy\\envs\\neopixel\\Scripts\\python.exe",
+    "python.pythonPath": "C:\\Users\\giddy\\Envs\\neopixels\\Scripts\\python.exe",
     "python.linting.enabled": false,
     "python.linting.pylintEnabled": true,
     "python.linting.pylintArgs": [

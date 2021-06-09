@@ -3,7 +3,8 @@ import time
 from datetime import datetime
 
 import chars
-from neopixeltest import *
+#from neopixeltest import *
+from neopixel import *
 
 #############################
 clock = False
